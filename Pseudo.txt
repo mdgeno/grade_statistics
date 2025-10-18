@@ -1,0 +1,44 @@
+-write a code that outputs the message asking the user to
+	'Enter point totals, -1 stops:'
+-only numbers between 0-100 are the only numbers that will be 
+	accepted, and -1 ends the taking user input, then outputs
+	the average of all accepted user input via the message
+	'Point average (all): f64_average_value'
+-make sure your program recognises that the number of values is
+	already almost full, then create a new array with increased
+	capacity, transfer all values of the old array, to the 
+	new array with increased capacity.
+	-rectified to ouput message to the user that maximum valid
+	input has already been reached.
+-try to output only the accepted values entered. (Utilise counter?)
+-calculate the average of the values accepted. (refer to above
+	required output).
+-try to make the result of the average a floating point value
+-continue with the next parts of the larger exercise problem of 
+	mooc (Part 3 Pass percentage)
+
+-grade input gets added to the array
+	-then valid values of the array are
+		averaged
+	-pass percentage of the values of the 		array are calculated.
+
+CONTINUE HERE!!
+-(function to output stars?)create a function that takes the array of user input, the counter that represents the current index of the last value, and the desired grade category as parameters, then outputs the number of stars according to the number of grades found in the given category.
+	-iterate through the values in the 		array, let each value check weather if 	it is within the desired range, then out 	put every value that's caught within the 	range condition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
