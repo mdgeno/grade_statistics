@@ -112,17 +112,55 @@ fn pass_percentage(arr: [i32; 10], current_count: i32) -> f64{
 
 
 fn print_stars(arr: [i32; 10], current_index: usize, grade_category: i32){
+	let mut i=0;
 	match grade_category{
-		5 => stars(arr, current_index, grade_category),
-		4 => stars(arr, current_index, grade_category),
-		3 => stars(arr, current_index, grade_category),
-		2 => stars(arr, current_index, grade_category),
-		1 => stars(arr, current_index, grade_category),
-		0 => stars(arr, current_index, grade_category),
+		5 => {while i<current_index{
+			if arr[i]>=90{
+				print!("*");
+			}
+			i+=1;
+		      }
+		      println!(" ");},
+		4 => {while i<current_index{
+			if arr[i]>=80&&arr[i]<90{
+				print!("*");
+			}
+			i+=1;
+		      }
+		      println!(" ");},
+		3 => {while i<current_index{
+			if arr[i]>=70&&arr[i]<80{
+				print!("*");
+			}
+			i+=1;
+		      }
+		      println!(" ");},
+		2 => {while i<current_index{
+			if arr[i]>=60&&arr[i]<70{
+				print!("*");
+		        }
+		        i+=1;
+		      }
+		      println!(" ");},
+		1 => {while i<current_index{
+			if arr[i]>=50&&arr[i]<60{
+				print!("*");
+			}
+			i+=1;
+		      }
+		      println!(" ");},
+		0 => {while i<current_index{
+			if arr[i]<50{
+				print!("*");
+			}
+			i+=1;
+		      }
+		      println!(" ");},
 		_ => println!("enter valid input")
 	}
 }
 
+/*
 fn stars(arr: [i32; 10], current_index: usize, grade_category: i32){
 	let mut i=0;
 	if grade_category==5{	
@@ -175,6 +213,7 @@ fn stars(arr: [i32; 10], current_index: usize, grade_category: i32){
 		println!(" ");
 	}
 }
+*/
 
 
 
