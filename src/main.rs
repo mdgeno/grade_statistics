@@ -39,25 +39,25 @@ fn main(){
 	};
 	println!("Pass percentage: {}", pass_percentage(arr, counter.try_into().unwrap()));
 
-	println!(" ");
+	println!("Grade distribution:");
 
 	print!("5: "); 
-	print_stars(arr, 5);
+	print_stars(arr, counter, 5);
 
-	println!("4: "); 
-	print_stars(arr, 4);
+	print!("4: "); 
+	print_stars(arr, counter, 4);
 
-	println!("3: "); 
-	print_stars(arr, 3);
+	print!("3: "); 
+	print_stars(arr, counter, 3);
 
-	println!("2: "); 
-	print_stars(arr, 2);
+	print!("2: "); 
+	print_stars(arr, counter, 2);
 
-	println!("1: "); 
-	print_stars(arr, 1);
+	print!("1: "); 
+	print_stars(arr, counter, 1);
 
-	println!("0: "); 
-	print_stars(arr, 0);
+	print!("0: "); 
+	print_stars(arr, counter, 0);
 }
 
 fn print_input(arr: [i32; 10], current_index: usize){
@@ -111,59 +111,66 @@ fn pass_percentage(arr: [i32; 10], current_count: i32) -> f64{
 }
 
 
-fn print_stars(arr: [i32; 10], grade_category: i32){
+fn print_stars(arr: [i32; 10], current_index: usize, grade_category: i32){
 	match grade_category{
-		5 => stars(arr, grade_category),
-		4 => stars(arr, grade_category),
-		3 => stars(arr, grade_category),
-		2 => stars(arr, grade_category),
-		1 => stars(arr, grade_category),
-		0 => stars(arr, grade_category),
+		5 => stars(arr, current_index, grade_category),
+		4 => stars(arr, current_index, grade_category),
+		3 => stars(arr, current_index, grade_category),
+		2 => stars(arr, current_index, grade_category),
+		1 => stars(arr, current_index, grade_category),
+		0 => stars(arr, current_index, grade_category),
 		_ => println!("enter valid input")
 	}
 }
 
-fn stars(arr: [i32; 10], grade_category: i32){
+fn stars(arr: [i32; 10], current_index: usize, grade_category: i32){
+	let mut i=0;
 	if grade_category==5{	
-		for grade in arr{
-			if grade>=90{
-				print!("* ");
+		while i<current_index{
+			if arr[i]>=90{
+				print!("*");
 			}
+			i+=1;
 		}
 		println!(" ");
 	}else if grade_category==4{	
-		for grade in arr{
-			if grade>=80&&grade<90{
-				print!("* ");
+		while i<current_index{
+			if arr[i]>=80&&arr[i]<90{
+				print!("*");
 			}
+			i+=1;
 		}
 		println!(" ");
 	}else if grade_category==3{
-		for grade in arr{
-			if grade>=70&&grade<80{
-				print!("* ");
+		while i<current_index{
+			if arr[i]>=70&&arr[i]<80{
+				print!("*");
 			}
+			i+=1;
 		}
 		println!(" ");
 	}else if grade_category==2{
-		for grade in arr{
-			if grade>=60&&grade<70{
-				print!("* ");
+		while i<current_index{
+			if arr[i]>=60&&arr[i]<70{
+				print!("*");
 			}
+			i+=1;
 		}
 		println!(" ");
 	}else if grade_category==1{
-		for grade in arr{
-			if grade>=50&&grade<60{
-				print!("* ");
+		while i<current_index{
+			if arr[i]>=50&&arr[i]<60{
+				print!("*");
 			}
+			i+=1;
 		}
 		println!(" ");
 	}else if grade_category==0{
-		for grade in arr{
-			if grade<50{
-				print!("* ");
+		while i<current_index{
+			if arr[i]<50{
+				print!("*");
 			}
+			i+=1;
 		}
 		println!(" ");
 	}
